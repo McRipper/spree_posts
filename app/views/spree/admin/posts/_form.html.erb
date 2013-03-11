@@ -14,14 +14,13 @@
     <% end %>
 
   </div>
-  
+
   <div class="omega eight columns">
     <%= f.field_container :permalink do %>
       <%= f.label :permalink, t(:permalink) %>
-      <%= f.text_field :permalink, :class => 'fullwidth' %>
+      <%= f.text_field :permalink, :class => 'fullwidth', hint: t(:leave_blank_to_autogenerate) %>
       <%= error_message_on :posts, :permalink%>
     <% end %>
-    
 
     <%= f.field_container :meta_description do %>
       <%= f.label :meta_description, t(:meta_description) %>
@@ -37,15 +36,6 @@
       <%= error_message_on :posts, :body %>
     <% end %>
 
- </div>
-
-
- <div class="alpha sixteen columns">
-    <%= f.field_container :published do %>
-      <%= f.label :published, t(:published) %>
-      <%= f.check_box :published, :class => 'fullwidth' %>
-      <%= error_message_on :posts, :published %>
-    <% end %>
  </div>
 
  <div class="alpha sixteen columns">

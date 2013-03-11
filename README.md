@@ -13,7 +13,7 @@ Installation
 ------------
 Add the following to your Gemfile: 
 
-    gem "spree_post", :git => 'git://github.com/digitalcake/spree_posts.git'
+    gem "spree_posts", :git => 'git://github.com/digitalcake/spree_posts.git'
 
 Run bundle install
 

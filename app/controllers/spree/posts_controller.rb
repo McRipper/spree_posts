@@ -6,7 +6,7 @@ module Spree
 
     respond_to :html
 
-    def index      
+    def index
       if params[:tag]
         @posts = Post.published.tagged_with(params[:tag]).page(params[:page]).per(4)
       else
@@ -22,14 +22,12 @@ module Spree
     end
 
     def current_order
-      
     end
-
 
     def find_by_archive
       sidebar
       @year = params[:year]
-      @month = Date::MONTHNAMES[params[:month].to_i]      
+      @month = Date::MONTHNAMES[params[:month].to_i]
       @posts = Post.archives(params[:year].to_i, params[:month].to_i).page(params[:page]).per(4)
     end
 
@@ -39,8 +37,5 @@ module Spree
       @archive    = Post.published.group_by{ |x| x.published_at.year }.map{ |k, v| [ k, v.group_by{ |x| x.published_at.month }.map{|k,v| [k,v.count] } ] }
     end
 
-    
   end
 end
-
-
