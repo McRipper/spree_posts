@@ -1,5 +1,5 @@
 <div data-hook="admin_user_form_fields" class="row">
-  
+
   <div class="alpha eight columns">
     <%= f.field_container :title do %>
       <%= f.label :title, t(:title) %>
@@ -18,7 +18,7 @@
   <div class="omega eight columns">
     <%= f.field_container :permalink do %>
       <%= f.label :permalink, t(:permalink) %>
-      <%= f.text_field :permalink, :class => 'fullwidth', hint: t(:leave_blank_to_autogenerate) %>
+      <%= f.text_field :permalink, :class => 'fullwidth' %>
       <%= error_message_on :posts, :permalink%>
     <% end %>
 
@@ -53,5 +53,5 @@
       <%= error_message_on :posts, :tag_list %>
     <% end %>
  </div>
-  
+
 </div>
