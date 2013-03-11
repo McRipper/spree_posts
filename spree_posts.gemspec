@@ -20,5 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency('acts-as-taggable-on', '~> 2.3.1')
   s.add_dependency('truncate_html',       '~> 0.5.5')
   s.add_dependency('kaminari',            '~> 0.13.0')
+  s.add_dependency('friendly_id',         '~> 4.0.9')
+  s.add_dependency('simple_form',         '~> 2.1.0')
 
 end
