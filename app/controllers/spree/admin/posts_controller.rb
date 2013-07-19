@@ -4,7 +4,7 @@ module Spree
     #cache_sweeper PostSweeper, :only => [ :edit, :update, :destroy ]
     
     def index
-     @posts = Post.page(params[:post])
+     @posts = Post.page(params[:page])
     end
     
     def new
